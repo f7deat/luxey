@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
                     <div className="mb-3">Do Not Sell My Personal Information</div>
                 </div>
             </div>
-            <div className="p-4 text-sm text-gray-300 mb-10 flex justify-between">
+            <div className="p-4 text-sm text-gray-300 flex justify-between">
                 <div>
                 (C) 2023 Luxey
                 </div>

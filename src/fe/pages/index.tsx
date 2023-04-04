@@ -10,10 +10,7 @@ import Pagination from '@/components/pagination'
 import Collapse from '@/components/collapse'
 import Search from '@/components/input/search'
 import Checkbox from '@/components/input/checkbox'
-import RangeSlider from 'react-range-slider-input';
-import 'react-range-slider-input/dist/style.css';
-
-const inter = Inter({ subsets: ['latin'] })
+import LuxeyRangeSlider from '@/components/input/ranger'
 
 export default function Home() {
 
@@ -49,7 +46,7 @@ export default function Home() {
         </div>
 
         <div className='container mx-auto'>
-          <div className='flex justify-end gap-4 mb-6'>
+          <div className='md:flex justify-end gap-4 mb-6'>
             <button className='px-4 py-2 border hover:border-gray-900'>USD</button>
             <button className='px-4 py-2 border hover:border-gray-900'>Hide Filters</button>
             <button className='px-4 py-2 border hover:border-gray-900'>Sort by</button>
@@ -80,7 +77,7 @@ export default function Home() {
                 <Checkbox label='Belt Bag (1)' />
               </Collapse>
               <Collapse title="PRICE">
-                <RangeSlider />
+                <LuxeyRangeSlider />
               </Collapse>
 
             </div>
