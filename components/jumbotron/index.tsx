@@ -1,8 +1,8 @@
 const Jumbotron: React.FC = () => {
     return (
         <div>
-            <div className="relative h-96 bg-gray-500">
-                <div className="absolute bg-white p-6 max-w-lg" style={{
+            <div className="relative md:h-96 bg-gray-500">
+                <div className="md:absolute bg-white p-6 w-full md:max-w-lg" style={{
                     left: '5%',
                     top: '10%'
                 }}>

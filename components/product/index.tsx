@@ -2,7 +2,7 @@ const Product: React.FC = () => {
     return (
         <div>
             <div className="flex flex-col">
-                <div className="bg-gray-500 h-64 w-full mb-4">
+                <div className="bg-gray-500 md:h-64 h-32 w-full mb-4">
 
                 </div>
                 <div className="font-medium mb-2">Hermès</div>

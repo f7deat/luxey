@@ -1,7 +1,7 @@
 const Navbar: React.FC = () => {
 
     return (
-        <ul className='md:flex'>
+        <ul className='md:flex hidden'>
             <li className="w-36 h-20 flex items-center justify-center uppercase font-medium">Home</li>
             <li className="w-36 h-20 flex items-center justify-center nav-item">
                 <div>

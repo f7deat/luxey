@@ -1,9 +1,10 @@
+import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon } from "@/icons"
 import Navbar from "../navbar"
 
 const Header: React.FC = () => {
     return (
         <div>
-            <div className="border-b">
+            <div className="border-b hidden md:block">
                 <div className="container mx-auto">
                     <div className="flex justify-end uppercase text-xs">
                         <ul className="flex md:gap-16 gap-4 flex-wrap py-3">
@@ -17,9 +18,9 @@ const Header: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div className="shadow mb-2">
-                <div className='container mx-auto'>
-                    <div className='md:flex justify-between h-20 items-center'>
+            <div className="shadow-lg mb-2">
+                <div className='container mx-auto px-6'>
+                    <div className='flex justify-between h-20 items-center'>
                         <div className="flex items-center">
                             <div className='font-bold mr-10'>
                                 <svg width="80" height="30" viewBox="0 0 80 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,7 +29,7 @@ const Header: React.FC = () => {
                             </div>
                             <Navbar />
                         </div>
-                        <div className="flex gap-4 items-center">
+                        <div className="md:flex hidden gap-4 items-center">
                             <div className="border rounded flex text-gray-500 items-center">
                                 <input type="text" className="md:w-96 w-64 h-full px-3 py-2 w-72 rounded" placeholder="Search Luxey's" />
                                 <span className="mr-3">
@@ -41,6 +42,18 @@ const Header: React.FC = () => {
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
                             </svg>
                         </div>
+                        <div className="flex gap-6">
+                            <button className="md:hidden">
+                                <MagnifyingGlassIcon className="w-6 h-6" />
+                            </button>
+                            <button className="md:hidden">
+                                <ShoppingBagIcon className="w-6 h-6" />
+                            </button>
+                            <button className="md:hidden">
+                                <Bars3Icon className="w-6 h-6" />
+                            </button>
+                        </div>
+
                     </div>
                 </div>
             </div>
