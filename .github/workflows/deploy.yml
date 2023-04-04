@@ -17,4 +17,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_ORG_ID: TNd54eKS2vrugPqdnLUQkL2s
-          VERCEL_PROJECT_ID: prj_Wju2uEivrsiP9Cij2xnQDGqmladL
+          VERCEL_PROJECT_ID: prj_s75iq48oJghDGQg3qktZpFo7E7G9
