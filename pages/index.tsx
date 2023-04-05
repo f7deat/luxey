@@ -6,11 +6,13 @@ import Search from '@/components/input/search'
 import Checkbox from '@/components/input/checkbox'
 import LuxeyRangeSlider from '@/components/input/ranger'
 import { Breadcrumb, Jumbotron, Pagination, ImageBox, Footer } from '@/components'
-import { FiltersIcon, USFlagIcon } from '@/icons'
+import { CloseIcon, FiltersIcon, USFlagIcon } from '@/icons'
+import { useState } from 'react'
 
 export default function Home() {
 
   const bags = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+  const [sidebarOpen, setSidebarOpen] = useState<boolean>(false);
 
   return (
     <>
@@ -26,14 +28,16 @@ export default function Home() {
           <Jumbotron />
         </div>
 
-        <div className='container mx-auto py-6 md:px-20 px-4'>
-          <div className='flex md:gap-6 gap-4'>
-            <ImageBox title='Birkin' />
-            <ImageBox title='Kelly' />
-            <ImageBox title='Constance' />
-            <ImageBox title='Evelyne' />
-            <ImageBox title='Picotin' />
-            <ImageBox title='Lindy' />
+        <div className='container mx-auto py-6 px-4'>
+          <div className='overflow-auto scrollbar-hide'>
+            <div className='flex md:gap-6 gap-4 justify-center'>
+              <ImageBox title='Birkin' />
+              <ImageBox title='Kelly' />
+              <ImageBox title='Constance' />
+              <ImageBox title='Evelyne' />
+              <ImageBox title='Picotin' />
+              <ImageBox title='Lindy' />
+            </div>
           </div>
         </div>
 
@@ -49,21 +53,30 @@ export default function Home() {
                 655 results
               </div>
               <Search />
-              <Collapse title="HANDBAG STYLE">
-                <Search />
-                <Checkbox label='24/24 (4)' />
-                <Checkbox label='Birkin (82)' />
-                <Checkbox label='Bolide (22)' />
-              </Collapse>
-              <Collapse title="HANDBAG TYPE">
-                <Search />
-                <Checkbox label='Accessory (92)' />
-                <Checkbox label='Backpack (15)' />
-                <Checkbox label='Belt Bag (1)' />
-              </Collapse>
-              <Collapse title="PRICE">
-                <LuxeyRangeSlider />
-              </Collapse>
+              <div className='opacity-25 fixed top-0 left-0 bottom-0 right-0 z-10 bg-gray-900 md:hidden' hidden={!sidebarOpen}></div>
+              <div className={ sidebarOpen ? 'md:block fixed w-64 md:w-full md:relative' : 'hidden md:block'} id="sidebar">
+                <div className='flex items-center justify-between md:hidden border-b py-4'>
+                  <div className='text-3xl'>Filters</div>
+                  <button onClick={() => setSidebarOpen(false)}>
+                    <CloseIcon />
+                  </button>
+                </div>
+                <Collapse title="HANDBAG STYLE">
+                  <Search />
+                  <Checkbox label='24/24 (4)' />
+                  <Checkbox label='Birkin (82)' />
+                  <Checkbox label='Bolide (22)' />
+                </Collapse>
+                <Collapse title="HANDBAG TYPE">
+                  <Search />
+                  <Checkbox label='Accessory (92)' />
+                  <Checkbox label='Backpack (15)' />
+                  <Checkbox label='Belt Bag (1)' />
+                </Collapse>
+                <Collapse title="PRICE">
+                  <LuxeyRangeSlider />
+                </Collapse>
+              </div>
 
             </div>
             <div className='md:w-3/4 mb-10'>
@@ -74,7 +87,7 @@ export default function Home() {
                   <span>USD</span>
                 </button>
                 <div className='flex gap-2'>
-                  <button className='px-4 py-2 border hover:border-gray-900 flex gap-2'>
+                  <button className='px-4 py-2 border hover:border-gray-900 flex gap-2' onClick={() => setSidebarOpen(!sidebarOpen)}>
                     <span>Filters</span>
                     <FiltersIcon />
                   </button>
