@@ -30,7 +30,7 @@ export default function Home() {
 
         <div className='container mx-auto py-6 px-4'>
           <div className='overflow-auto scrollbar-hide'>
-            <div className='flex md:gap-6 gap-4 justify-center'>
+            <div className='flex md:gap-6 xl:gap-16 gap-4 justify-center'>
               <ImageBox title='Birkin' />
               <ImageBox title='Kelly' />
               <ImageBox title='Constance' />
@@ -53,7 +53,7 @@ export default function Home() {
                 655 results
               </div>
               <Search />
-              <div className='opacity-25 fixed top-0 left-0 bottom-0 right-0 z-10 bg-gray-900 md:hidden' hidden={!sidebarOpen}></div>
+              <div className='opacity-25 fixed top-0 left-0 bottom-0 right-0 z-40 bg-gray-900 md:hidden' hidden={!sidebarOpen}></div>
               <div className={ sidebarOpen ? 'md:block fixed w-64 md:w-full md:relative' : 'hidden md:block'} id="sidebar">
                 <div className='flex items-center justify-between md:hidden border-b py-4'>
                   <div className='text-3xl'>Filters</div>

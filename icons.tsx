@@ -72,3 +72,10 @@ export function ArrowRightIcon(props: SVGAttributes<SVGElement>) {
     );
 }
 
+export function ArrowLeftIcon(props: SVGAttributes<SVGElement>) {
+    return (
+        <svg {...props} xmlns="http://www.w3.org/2000/svg" width="9.5" height={17} viewBox="0 0 9.5 17" fill="none"><path d="m0 8.5000013c0 0.203 0.0823 0.3974 0.2282 0.5387l7.99995 7.7499997c0.29751 0.2882 0.77232 0.2806 1.06053-0.0169 0.28821-0.2975 0.28067-0.7723-0.01683-1.0605L1.8279 8.5000013 9.27185 1.2886813c0.2975-0.28821 0.30504-0.76302 0.01683-1.06053-0.28821-0.2975-0.76302-0.30504-1.06053-0.01683L0.2282 7.9613013C0.0823 8.1026013 0 8.2970013 0 8.5000013Z" fill="#00253e" /></svg>
+    );
+}
+
+

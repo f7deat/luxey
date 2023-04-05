@@ -7,11 +7,11 @@ const Header: React.FC = () => {
     const [open, setOpen] = useState<boolean>(false);
 
     return (
-        <div>
-            <div className="border-b hidden md:block">
+        <div className="flex flex-col-reverse md:flex-col pt-16 md:pt-0">
+            <div className="border-b md:block hidden">
                 <div className="container mx-auto">
-                    <div className="flex justify-end uppercase text-xs">
-                        <ul className="flex md:gap-16 gap-4 flex-wrap py-3">
+                    <div className="flex md:justify-end uppercase text-xs">
+                        <ul className="flex md:gap-16 gap-4 flex-wrap py-3 flex-col md:flex-row z-50">
                             <li>Log In</li>
                             <li>Preferred Access</li>
                             <li>About</li>
@@ -22,7 +22,7 @@ const Header: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div className="shadow-lg mb-2">
+            <div className="shadow-lg mb-2 top-0 left-0 right-0 md:relative fixed bg-white z-30">
                 <div className='container mx-auto px-6'>
                     <div className='flex justify-between md:h-20 h-16 items-center'>
                         <div className="flex items-center">
