@@ -1,10 +1,24 @@
 import { ArrowLeftIcon, ArrowRightIcon, CloseIcon } from "@/icons";
+import Link from "next/link";
 import { useState } from "react";
 
 type NavItemProps = {
     name: string;
+    url?: string;
     childen?: any;
 }
+
+const SingleNavItem: React.FC<NavItemProps> = (props) => (
+    <li className="px-6 nav-item">
+        <div className="flex items-center justify-between md:justify-center xl:w-36 md:h-20 h-14">
+            <Link href={props.url || ''}>
+                <button className="uppercase font-medium relative">
+                    {props.name}
+                </button>
+            </Link>
+        </div>
+    </li>
+)
 
 const NavItem: React.FC<NavItemProps> = (props) => {
 
@@ -86,4 +100,4 @@ const NavItem: React.FC<NavItemProps> = (props) => {
     )
 }
 
-export default NavItem
+export { NavItem, SingleNavItem }
