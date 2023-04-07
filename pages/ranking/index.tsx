@@ -30,10 +30,10 @@ export default function Ranking() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <SimpleHeader />
-            <main className="p-10">
+            <main className="md:p-10 px-4">
                 <Row gutter={16}>
-                    <Col md={6}>
-                        <div className="mb-10 text-4xl">
+                    <Col md={6} xs={4}>
+                        <div className="mb-10 md:text-4xl">
                             <div className={playfairDisplay.className}>Hermes bag</div>
                             <div className={playfairDisplay.className}>ranking</div>
                         </div>
@@ -41,25 +41,25 @@ export default function Ranking() {
                             items={getBags()}
                         />
                     </Col>
-                    <Col md={12}>
+                    <Col md={12} xs={20}>
                         <div className="flex justify-end mb-20">
                             <div className="border-b border-gray-500 flex items-center py-2">
                                 <MagnifyingGlassIcon className="mr-4 text-gray-400" />
                                 <div className={inter.className}>
-                                    <input type="text" value="hermes birkin" className="w-96 text-xl" />
+                                    <input type="text" value="hermes birkin" className="md:w-96 md:text-xl" />
                                 </div>
                             </div>
                         </div>
                         {
                             getBags().map(bag => (
                                 <div key={bag.key} id={bag.key}>
-                                    <div className="flex mb-10 gap-10">
-                                        <div className="h-40 w-52 bg-gray-500">
+                                    <div className="flex mb-10 md:gap-10 gap-4">
+                                        <div className="md:h-40 md:w-52 w-32 h-32 bg-gray-500">
 
                                         </div>
                                         <div className="flex-grow">
-                                            <div className="text-2xl text-gray-500">{bag.title}</div>
-                                            <div className="text-2xl">
+                                            <div className="md:text-2xl text-gray-500">{bag.title}</div>
+                                            <div className="md:text-2xl">
                                                 <div className={playfairDisplay.className}>
                                                     Hermes Birkin HSS 35 Bag Bordeaux Porosus Crocodile Gold Hardware
                                                 </div>
