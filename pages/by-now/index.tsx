@@ -1,17 +1,16 @@
 import { Jumbotron, ImageBox, Footer } from "@/components";
 import Collapse from "@/components/collapse";
 import Header from "@/components/header";
-import { Checkbox } from "@/components/input";
+import { Checkbox, Search } from "@/components/input";
 import LuxeyRangeSlider from "@/components/input/ranger";
 import Product from "@/components/product";
 import { CloseIcon, USFlagIcon, FiltersIcon } from "@/icons";
 import { Breadcrumb, Pagination } from "antd";
-import Search from "antd/es/transfer/search";
 import Head from "next/head";
 import { useState } from "react";
 
 export default function ByNow() {
-    const bags = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+  const bags = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
   const [sidebarOpen, setSidebarOpen] = useState<boolean>(false);
 
   return (
@@ -54,7 +53,7 @@ export default function ByNow() {
               </div>
               <Search />
               <div className='opacity-25 fixed top-0 left-0 bottom-0 right-0 z-40 bg-gray-900 md:hidden' hidden={!sidebarOpen}></div>
-              <div className={ sidebarOpen ? 'md:block fixed w-64 md:w-full md:relative' : 'hidden md:block'} id="sidebar">
+              <div className={sidebarOpen ? 'md:block fixed w-64 md:w-full md:relative' : 'hidden md:block'} id="sidebar">
                 <div className='flex items-center justify-between md:hidden border-b py-4'>
                   <div className='text-3xl'>Filters</div>
                   <button onClick={() => setSidebarOpen(false)}>
