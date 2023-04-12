@@ -11,7 +11,7 @@ const Navbar: React.FC<NavbarProps> = (props) => {
     return (
         <ul className={`md:flex z-50 ${open ? 'bg-stone-100 w-screen fixed h-full top-6 left-0 mt-10' : 'hidden'}`}>
             <NavItem name="Home" />
-            <NavItem name="AUCTIONS" />
+            <SingleNavItem name="BY NOW" url="by-now" />
             <SingleNavItem name="RANKING" url="ranking" />
             <NavItem name="CHART" />
         </ul>
